@@ -1,0 +1,13 @@
+@import "partials/variables";
+@import "bootstrap";
+@import "bootstrap-theme";
+
+%section-speccing{
+  padding: $speccing;
+}
+.section-speccing{
+  @extend %section-speccing;
+}
+h2{
+  background-color: #000;
+}
