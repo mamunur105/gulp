@@ -1,0 +1,74 @@
+@import "partials/variables";
+@import "bootstrap";
+@import "bootstrap-theme";
+body{
+
+    h2{
+        color:yellow;
+    }
+    a{
+        color: $link-color;
+    }
+}
+
+.primary{
+    &-title{
+        color: $link-color;
+    }
+    .color{
+        color: $link-color;
+    }
+}
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.box { 
+    @extend %message-shared; 
+    @include transform(rotate(30deg));
+ }
+.box2 {
+    @extend %message-shared; 
+    @include transform(rotate(30deg)); 
+}
+
+/* This CSS will print because %message-shared is extended. */
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+// This CSS won't print because %equal-heights is never extended.
+%equal-heights {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.message {
+  @extend %message-shared;
+}
+
+.success {
+  @extend %message-shared;
+  border-color: green;
+}
+
+.error {
+  @extend %message-shared;
+  border-color: red;
+}
+
+.warning {
+  @extend %message-shared;
+  border-color: yellow;
+}

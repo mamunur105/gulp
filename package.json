@@ -9,23 +9,14 @@
   "keywords": [
     "gulp"
   ],
-  "author": "MD Sultan Nasir Uddin",
+  "author": "MD Mamunur Rashid",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.13",
     "del": "^6.0.0",
-    "fibers": "^5.0.0",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-changed": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-html-replace": "^1.6.1",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.1",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.2",
-    "run-sequence": "^2.2.1"
+    "gulp-sourcemaps": "^2.6.5"
   }
 }
