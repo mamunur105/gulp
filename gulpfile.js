@@ -1,19 +1,19 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var cleanCSS = require('gulp-clean-css');
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat');
-var imagemin = require('gulp-imagemin');
-var changed = require('gulp-changed');
-var htmlReplace = require('gulp-html-replace');
-var htmlMin = require('gulp-htmlmin');
-var del = require('del');
-var sequence = require('run-sequence');
+const {src, series, parallel } = require('gulp');
+const browserSync = require('browser-sync');
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
+const cleanCSS = require('gulp-clean-css');
+const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
+const imagemin = require('gulp-imagemin');
+const changed = require('gulp-changed');
+const htmlReplace = require('gulp-html-replace');
+const htmlMin = require('gulp-htmlmin');
+const del = require('del');
+const sequence = require('run-sequence');
 
-var config = {
+const config = {
   dist: 'dist/',
   src: './',
   cssin: 'assets/css/**/*.css',
@@ -32,7 +32,7 @@ var config = {
   jsreplaceout: 'js/script.js'
 };
 
-const { series, parallel } = require('gulp');
+
 
 function clean(cb) {
   // body omitted
@@ -86,5 +86,3 @@ exports.build = series(
 );
 
 exports.default = series(clean, build);
-
-// gulp.task('default', ['serve']);
